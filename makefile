@@ -71,7 +71,7 @@ push:
 	@read -p "Enter commit message: " msg; \
 	git add .; \
 	git commit -m "$$msg"; \
-	git push origin main
+	git push origin master
 	@echo "Code and DB dump have been committed and pushed successfully."
 
 # 7. Pull code from remote
