@@ -3,7 +3,7 @@ name: CI/CD for WordPress
 on:
   push:
     branches:
-      - main # Trigger workflow when code is pushed to the dev branch
+      - master # Trigger workflow when code is pushed to the dev branch
 
 jobs:
   build-and-deploy:
