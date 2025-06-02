@@ -47,7 +47,7 @@ update-siteurl:
 
 # 4. Revert siteurl and home
 revert-siteurl:
-	@$(DOCKER_COMPOSE) exec -e MYSQL_PWD="$(DB_PASSWORD)" $(DB_SERVICE) mysql -u$(DB_USER) $(DB_NAME) -e "UPDATE $(DB_TABLE_PREFIX)options SET option_value = 'https://usagcd.net' WHERE option_name IN ('siteurl','home');"
+	@$(DOCKER_COMPOSE) exec -e MYSQL_PWD="$(DB_PASSWORD)" $(DB_SERVICE) mysql -u$(DB_USER) $(DB_NAME) -e "UPDATE $(DB_TABLE_PREFIX)options SET option_value = 'https://wp.usagcd.net' WHERE option_name IN ('siteurl','home');"
 	@echo "Reverted siteurl and home."
 
 # 5. Stop local environment
@@ -76,7 +76,7 @@ push:
 
 # 7. Pull code from remote
 pull:
-	@git pull origin main
+	@git pull origin master
 	@echo "Code has been pulled successfully."
 
 # make clean to remove the image
