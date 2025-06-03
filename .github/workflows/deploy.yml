@@ -44,4 +44,4 @@ jobs:
           scp -i ~/.ssh/id_rsa usagcd-net-db-dump.sql production-server:/tmp/usagcd-net-db-dump.sql
 
           # Import the database on the production server
-          ssh -i ~/.ssh/id_rsa production-server "mysql -h10.4.30.2 -u hdbWeejb -pMiwmgdmvgKUxfAyym1rs wp_JWjkK < /tmp/usagcd-net-db-dump.sql"
+          ssh -i ~/.ssh/id_rsa production-server "mysql -h10.4.30.2 -u hdbWeejb -pIdGWusgagbSzHZLfYBrb wp_JWjkK < /tmp/usagcd-net-db-dump.sql"
