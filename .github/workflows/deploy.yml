@@ -27,7 +27,7 @@ jobs:
 
       - name: Trigger Portainer Webhook
         run: |
-          curl -k -X POST https://5.181.83.200:9443/api/stacks/webhooks/982c8c72-68fa-4713-9dd6-ad58b9a91724
+          curl -k -X POST https://5.181.83.200:9443/api/stacks/webhooks/86243402-b63d-46e8-85c7-e95f02fb08c2
         env:
           CURL_CA_BUNDLE: /etc/ssl/certs/ca-certificates.crt
 
@@ -41,7 +41,7 @@ jobs:
       - name: Import Database via SSH
         run: |
           # Copy the latest canadav-org-db-dump.sql to the production server
-          scp -i ~/.ssh/id_rsa canadav-org-db-dump.sql production-server:/tmp/canadav-org-db-dump.sql
+          scp -i ~/.ssh/id_rsa usagcd-net-db-dump.sql production-server:/tmp/usagcd-net-db-dump.sql
 
           # Import the database on the production server
-          ssh -i ~/.ssh/id_rsa production-server "mysql -h10.4.30.2 -u JrPrme -pMiwmgdmvgKUxfAyym1rs wp_hje0n < /tmp/canadav-org-db-dump.sql"
+          ssh -i ~/.ssh/id_rsa production-server "mysql -h10.4.30.2 -u hdbWeejb -pMiwmgdmvgKUxfAyym1rs wp_JWjkK < /tmp/usagcd-net-db-dump.sql"
