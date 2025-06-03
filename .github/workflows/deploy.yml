@@ -40,7 +40,7 @@ jobs:
 
       - name: Import Database via SSH
         run: |
-          # Copy the latest canadav-org-db-dump.sql to the production server
+          # Copy the latest usagcd-net-db-dump.sql to the production server
           scp -i ~/.ssh/id_rsa usagcd-net-db-dump.sql production-server:/tmp/usagcd-net-db-dump.sql
 
           # Import the database on the production server
